@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: pet-hospital-mcp
+Version: 0.1.0
+Summary: MCP server exposing the pet hospital Go REST API
+Requires-Python: >=3.11
+Requires-Dist: mcp==2.0.0
+Requires-Dist: httpx>=0.28.0
+Requires-Dist: pydantic>=2.10.0
+Requires-Dist: uvicorn>=0.30.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
+Requires-Dist: respx>=0.21.0; extra == "dev"
