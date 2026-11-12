@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xagent"
+version = "0.1.0"
+description = "xAgent：核心与界面分离的玄学命理顾问 Agent"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "textual>=0.80",
+    "trafilatura>=2.0",
+    "mcp>=1.0",
+    "anyio>=4.0",
+]
+
+[project.scripts]
+xagent-tui = "tui.__main__:main"
+
+[tool.setuptools]
+packages = [
+    "core",
+    "core.llm",
+    "core.utils",
+    "core.tools",
+    "core.tools.fileops",
+    "core.tools.systime",
+    "core.tools.fetchweb",
+    "core.tools.search",
+    "core.tools.runcli",
+    "core.tools.skills",
+    "core.tools.context",
+    "core.tools.mcp",
+    "tui",
+]
+package-dir = {"" = "."}
+
+[tool.setuptools.package-data]
+tui = ["*.tcss"]

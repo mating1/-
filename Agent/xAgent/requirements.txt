@@ -1,0 +1,11 @@
+# 核心运行依赖（TUI、LLM 流式、MCP 客户端、网页抓取）
+requests>=2.31
+textual>=0.80
+trafilatura>=2.0
+mcp>=1.0
+anyio>=4.0
+
+# 可选：本地离线语音识别（懒加载，点话筒时才导入；不装不影响主对话）
+faster-whisper>=1.2
+pyaudio>=0.2.14
+numpy>=1.26

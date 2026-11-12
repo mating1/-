@@ -1,0 +1,413 @@
+/* xAgent TUI 样式表 · 粉蓝可爱主题 */
+
+Screen {
+    layout: vertical;
+    background: #fbf7fd;
+    color: #445066;
+}
+
+Header {
+    background: #ffeef7;
+    color: #b25d86;
+}
+
+Footer {
+    background: #ffeef7;
+    color: #8a93a6;
+    dock: bottom;
+}
+
+/* 左侧竖排工具栏 */
+#toolbar {
+    width: 1fr;
+    min-width: 14;
+    max-width: 22;
+    height: 1fr;
+    background: #ffeef7;
+    padding: 1 1;
+}
+
+/* 会飘在界面上的吉祥物：可拖、可点 */
+#pet {
+    position: absolute;
+    offset: 60 3;
+    layer: overlay;
+    background: rgba(0,0,0,0);
+    text-wrap: nowrap;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: none;
+}
+
+#pet-bubble {
+    position: absolute;
+    offset: 0 0;
+    display: none;
+    layer: overlay;
+    width: auto;
+    height: auto;
+    padding: 0 1;
+    background: #fff4fa;
+    color: #b25d86;
+    border: round #ffc7dd;
+    text-wrap: nowrap;
+}
+
+#toolbar Button {
+    width: 100%;
+    height: 3;
+    margin: 0 0 1 0;
+    background: #ffffff;
+    color: #b25d86;
+    border: round #f8cfe3;
+}
+
+#toolbar Button:hover {
+    background: #ffe3f0;
+    color: #ff6f9c;
+    border: round #ff9ec4;
+}
+
+#toolbar Button:focus {
+    background: #e8f6ff;
+    color: #3f8fbf;
+    border: round #9ed3f2;
+}
+
+#main-row {
+    height: 1fr;
+}
+
+#sidebar {
+    width: 2fr;
+    min-width: 20;
+    height: 1fr;
+    background: #fff4fa;
+    border: round #f2d8e6;
+    margin: 0 0 0 1;
+    padding: 1;
+}
+
+/* 可拖动的分隔条 */
+.splitter {
+    width: 2;
+    height: 1fr;
+    background: #f7e3ee;
+    color: #dfb1ca;
+    text-align: center;
+}
+
+.splitter:hover {
+    background: #ff9ec4;
+    color: #ffffff;
+}
+
+/* 细窄收起条（一行高） */
+.collapse-bar {
+    width: 100%;
+    height: 1;
+    background: #ffeef7;
+    color: #b25d86;
+    text-align: center;
+    content-align: center middle;
+}
+
+.collapse-bar:hover {
+    background: #ff9ec4;
+    color: #ffffff;
+}
+
+/* 侧栏历史会话列表 */
+#session-list {
+    height: auto;
+    max-height: 14;
+    scrollbar-size-vertical: 1;
+}
+
+#session-list > ListItem {
+    padding: 0 1;
+}
+
+#sidebar-scroll {
+    height: 1fr;
+    scrollbar-size-vertical: 1;
+}
+
+.side-title {
+    text-style: bold;
+    color: #ff6f9c;
+    margin-bottom: 1;
+}
+
+.side-info {
+    color: #7b8494;
+    height: auto;
+}
+
+.mcp-info {
+    margin-top: 0;
+}
+
+#file-panel {
+    width: 2fr;
+    min-width: 20;
+    height: 1fr;
+    background: #f4faff;
+    border: round #d6ecfa;
+    margin: 0 1 0 0;
+    padding: 1;
+}
+
+#file-list {
+    height: 1fr;
+    scrollbar-size-vertical: 1;
+}
+
+#file-list > ListItem {
+    padding: 0 1;
+}
+
+#chat-log {
+    height: 1fr;
+    width: 3fr;
+    min-width: 24;
+    padding: 1 2;
+    overflow-y: auto;
+    scrollbar-size-vertical: 1;
+}
+
+#chat-log > Markdown {
+    height: auto;
+    margin: 0 0 1 0;
+    background: #ffffff;
+    border: round #f6e3ef;
+    padding: 0 1;
+}
+
+.user-bubble {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1 0;
+    padding: 0 1;
+    background: #e9f6ff;
+    border-left: thick #9ed3f2;
+    color: #33455a;
+}
+
+.error-banner {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1 0;
+    padding: 0 1;
+    background: #ffe7ec;
+    border-left: thick #ff8095;
+    color: #a13b4f;
+}
+
+.tool-card {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1 0;
+    padding: 0 1;
+    background: #fdf4ff;
+    border: round #e9d8f4;
+}
+
+.tool-card > .tool-body {
+    width: 100%;
+    height: auto;
+    color: #7b8494;
+}
+
+#prompt {
+    margin: 0 2;
+    background: #ffffff;
+    border: tall #ffb3d1;
+    color: #445066;
+}
+
+#prompt:focus {
+    border: tall #9ed3f2;
+}
+
+#prompt-row {
+    height: 3;
+    padding: 0 2;
+}
+
+#prompt-row #prompt {
+    width: 1fr;
+    margin: 0;
+}
+
+#prompt-row #btn-voice {
+    width: 7;
+    height: 100%;
+    margin: 0 0 0 1;
+    padding: 0;
+    background: #ffc7dd;
+    color: #ffffff;
+    border: round #ffe1ee;
+    text-style: bold;
+}
+
+#prompt-row #btn-voice:hover {
+    background: #ffa5c9;
+    border: round #ffffff;
+}
+
+#prompt-row #btn-voice:focus {
+    background: #ffa5c9;
+    border: round #ffffff;
+}
+
+#prompt-row #btn-voice.recording {
+    background: #ff708f;
+    border: round #ffffff;
+}
+
+#prompt-row #btn-voice.thinking {
+    background: #a9d8f5;
+    border: round #ffffff;
+}
+
+#status-bar {
+    height: 1;
+    padding: 0 2;
+    background: #ffeef7;
+    color: #8a93a6;
+}
+
+/* 上下文压缩日志浮动面板 */
+CompactLogScreen {
+    align: center middle;
+    background: #fbf7fd 70%;
+}
+
+#compact-log-title {
+    dock: top;
+    height: 1;
+    padding: 0 2;
+    background: #ffd7ea;
+    color: #b25d86;
+    text-style: bold;
+}
+
+#compact-cols {
+    height: 1fr;
+    width: 100%;
+}
+
+.compact-col {
+    width: 1fr;
+    height: 1fr;
+    background: #ffffff;
+    border: round #f4c9df;
+    margin: 1 1 0 1;
+}
+
+.compact-col-title {
+    height: 1;
+    padding: 0 1;
+    background: #ffeef7;
+    color: #ff6f9c;
+    text-style: bold;
+}
+
+#compact-scroll-before,
+#compact-scroll-after {
+    height: 1fr;
+    scrollbar-size-vertical: 1;
+    scrollbar-size-horizontal: 1;
+}
+
+.compact-body {
+    width: 100%;
+    height: auto;
+    padding: 0 1;
+    color: #445066;
+}
+
+#compact-log-close {
+    dock: bottom;
+    height: 3;
+    width: 100%;
+    margin: 1 1 1 1;
+    background: #ffd7ea;
+    color: #b25d86;
+    border: round #ffb3d1;
+}
+
+/* 斜杠命令补全引导面板 */
+#slash-hint {
+    height: auto;
+    max-height: 11;
+    display: none;
+    padding: 0 2;
+    background: #f4faff;
+    color: #6f7b8d;
+    border-top: solid #bfe0f5;
+}
+
+/* 历史会话列表面板 */
+ResumeScreen {
+    align: center middle;
+    background: #fbf7fd 70%;
+}
+
+#resume-box {
+    width: 76;
+    height: auto;
+    max-height: 26;
+    padding: 1 2;
+    background: #ffffff;
+    border: round #ffb3d1;
+}
+
+#resume-title {
+    text-style: bold;
+    color: #ff6f9c;
+    margin-bottom: 1;
+}
+
+#resume-list {
+    height: auto;
+    max-height: 18;
+    scrollbar-size-vertical: 1;
+}
+
+#resume-hint {
+    color: #8a93a6;
+    margin-top: 1;
+}
+
+/* 首次生成配置的提示弹窗 */
+ConfigWarningScreen {
+    align: center middle;
+    background: #fbf7fd 70%;
+}
+
+#config-warn-box {
+    width: 78;
+    height: auto;
+    padding: 1 2;
+    background: #ffffff;
+    border: round #ffc978;
+}
+
+#config-warn-title {
+    text-style: bold;
+    color: #d68a2b;
+    margin-bottom: 1;
+}
+
+#config-warn-body {
+    height: auto;
+    margin-bottom: 1;
+    color: #445066;
+}
+
+#config-warn-close {
+    margin-top: 1;
+}
